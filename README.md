@@ -15,7 +15,7 @@ Then visit <http://localhost:8000>.
 ## Add a post
 
 1. Copy `posts/example-post.html` and give it a lowercase filename, such as `my-new-post.html`.
-2. Replace the title, summary, and article text. Do not write a date or time—the script reads it automatically from the post file's `Last-Modified` value.
+2. Replace the title, summary, and article text. Do not write a date or time—the script reads the date of the post file's first GitHub commit.
 3. Add a matching post summary and link near the top of `index.html`.
 4. Keep the `data-auto-datetime` line unchanged.
 
@@ -25,7 +25,7 @@ Example:
 <time data-auto-datetime>date and time loading…</time>
 ```
 
-On the homepage, add `data-source="posts/your-post.html"` so the timestamp is read from that post rather than from `index.html`. GitHub Pages supplies the file modification time; the browser formats it in each visitor's local time zone.
+On the homepage, add `data-source="posts/your-post.html"` so the timestamp is read from that post. The script uses the file's oldest GitHub commit, so editing another page—or editing the post later—does not change its published date. The browser formats it in each visitor's local time zone.
 
 ## Add images and animated GIFs
 

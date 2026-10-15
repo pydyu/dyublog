@@ -35,6 +35,8 @@ body {
 main { padding-bottom: 45px; }
 
 .post-summary {
+  width: min(680px, calc(100vw - 36px));
+  margin-inline: auto;
   padding: 48px 0;
   border-bottom: 1px solid var(--line);
 }
